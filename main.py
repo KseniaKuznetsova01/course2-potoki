@@ -6,8 +6,9 @@ def ReverseNumber(n):
 t0=time.time()
 f = open('text.txt', 'r')
 
+t1=time.time()
 for line in f:
     print(ReverseNumber(int(line)))
-
-print(time.time()-t0)
+print(t1-t0)
+print(time.time()-t1)
 f.close()

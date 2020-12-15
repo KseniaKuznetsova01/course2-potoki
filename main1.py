@@ -12,10 +12,11 @@ def funk(n):
 
 th1 = Thread(target=funk, args=(1, ))
 th2 = Thread(target=funk, args=(2, ))
-
+t1=time.time()
 th1.start()
 th2.start()
 th1.join()
 th2.join()
 f.close()
-print(time.time()-t0)
+print(t1-t0)
+print(time.time()-t1)

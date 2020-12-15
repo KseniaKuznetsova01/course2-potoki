@@ -8,6 +8,7 @@ def ReverseNumber(n):
 
 t0=time.time()
 f =  open('text.txt', 'r')
+t1 = time.time()
 with ThreadPoolExecutor(max_workers=3) as pool:
     r = [pool.submit(ReverseNumber, line) for line in f]
 
@@ -15,4 +16,5 @@ with ThreadPoolExecutor(max_workers=3) as pool:
         print(future.result())
 
 f.close()
-print(time.time()-t0)
+print(t1-t0)
+print(time.time()-t1)
